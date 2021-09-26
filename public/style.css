@@ -53,7 +53,7 @@ nav {
 .our-team {
   padding: 30px 0 40px;
   margin-bottom: 30px;
-  background-color: #cbc9eb;
+  background-color: #ece0d9;
   text-align: center;
   overflow: hidden;
   position: relative;
@@ -289,14 +289,15 @@ input[type="checkbox"]:checked + label {
 /* services style */
 .card {
   border-radius: 4px;
-  background: #fff;
+  background: #e0d5cf;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
   transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
     0.3s box-shadow,
     0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-  padding: 14px 80px 18px 36px;
+  padding: 8%;
   cursor: pointer;
   height: 300px;
+  text-align: center;
 }
 
 .card:hover {
@@ -308,14 +309,14 @@ input[type="checkbox"]:checked + label {
   font-weight: 600;
 }
 
-.card img {
+/* .card img {
   position: absolute;
   top: 20px;
   right: 15px;
   max-height: 120px;
-}
+} */
 
-.card-1 {
+/* .card-1 {
   background-image: url(https://ionicframework.com/img/getting-started/ionic-native-card.png);
   background-repeat: no-repeat;
   background-position: right;
@@ -334,7 +335,7 @@ input[type="checkbox"]:checked + label {
   background-repeat: no-repeat;
   background-position: right;
   background-size: 80px;
-}
+} */
 
 @media (max-width: 990px) {
   .card {
