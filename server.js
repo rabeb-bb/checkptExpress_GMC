@@ -4,7 +4,9 @@ const isAuth = require("./middleware/auth");
 const app = express();
 
 const PORT = 7000;
-
+app.get("/style.css", (req, res) => {
+  res.sendFile(__dirname + "/public/style.css");
+});
 app.use(isAuth);
 
 //either write this piece of code to indicate that you are allowed access to the files in public folder

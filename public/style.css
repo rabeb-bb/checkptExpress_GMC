@@ -4,22 +4,35 @@
   padding: 0%;
 }
 
+h1 {
+  padding: 5% 30%;
+  color: rgb(255, 255, 255);
+  background-image: url(./assets/cover.jpg);
+  background-size: 100%;
+  opacity: 0.85;
+  font-size: 4em;
+}
+.cover {
+  width: 100%;
+  height: 250px;
+}
 nav a {
   text-decoration: none;
-  color: inherit;
+  color: rgb(155, 152, 163);
 }
 nav li {
   list-style: none;
   padding: 0% 1%;
 }
 nav a:hover {
-  text-shadow: rgb(201, 197, 184) 10px 5px 10px;
+  color: rgb(255, 255, 255);
 }
 nav {
+  margin-top: 0%;
   padding: 1%;
-  background-color: rgb(53, 49, 49);
+  background-color: rgb(40, 39, 44);
   color: white;
-  box-shadow: rgb(146, 142, 127) 2px 0 10px;
+  box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.4);
   /* flexbox */
   display: flex;
 }
@@ -33,4 +46,298 @@ nav {
   /* justify-content: center; */
   /* align-content: center; */
   align-items: center;
+  text-align: center;
+}
+
+/* profiles */
+.our-team {
+  padding: 30px 0 40px;
+  margin-bottom: 30px;
+  background-color: #cbc9eb;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.our-team .picture {
+  display: inline-block;
+  height: 130px;
+  width: 130px;
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+}
+
+.our-team .picture::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: #1369ce;
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 0.9;
+  transform: scale(3);
+  transition: all 0.3s linear 0s;
+}
+
+.our-team:hover .picture::before {
+  height: 100%;
+}
+
+.our-team .picture::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #1369ce;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.our-team .picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .picture img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+
+.our-team .title {
+  display: block;
+  font-size: 15px;
+  color: #4e5052;
+  text-transform: capitalize;
+}
+
+.our-team .social {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #1369ce;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.our-team:hover .social {
+  bottom: 0;
+}
+
+.our-team .social li {
+  display: inline-block;
+}
+
+.our-team .social li a {
+  display: block;
+  padding: 10px;
+  font-size: 17px;
+  color: white;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+.our-team .social li a:hover {
+  color: #1369ce;
+  background-color: #f7f5ec;
+}
+
+/* for the contact form */
+.contact h3 {
+  font-family: "Poppins", sans-serif, "arial";
+  font-weight: 600;
+  font-size: 3em;
+  color: rgb(73, 72, 72);
+  text-align: center;
+}
+
+.contact h4 {
+  font-family: "Roboto", sans-serif, "arial";
+  font-weight: 400;
+  font-size: 2em;
+  color: #b3b3b3;
+  line-height: 1.5;
+}
+
+/* ///// inputs /////*/
+
+input:focus ~ label,
+textarea:focus ~ label,
+input:valid ~ label,
+textarea:valid ~ label {
+  font-size: 1em;
+  color: #999;
+  top: -5px;
+  -webkit-transition: all 0.225s ease;
+  transition: all 0.225s ease;
+}
+
+.styled-input {
+  float: left;
+  width: 250px;
+  margin: 0.5rem 1.6rem;
+  position: relative;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+  .styled-input {
+    width: 100%;
+  }
+}
+
+.styled-input label {
+  color: #999;
+  padding: 1.3rem 30px 1rem 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.styled-input.wide {
+  width: 600px;
+  max-width: 100%;
+}
+
+input,
+textarea {
+  padding: 30px;
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
+}
+
+input:focus ~ span,
+textarea:focus ~ span {
+  width: 100%;
+  -webkit-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+}
+
+textarea {
+  width: 100%;
+  min-height: 10em;
+}
+
+.input-container {
+  width: 650px;
+  max-width: 100%;
+  margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+  float: right;
+  padding: 7px 35px;
+  border-radius: 60px;
+  display: inline-block;
+  background-color: #4b8cfb;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.07);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(1px);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
+}
+
+@media (max-width: 768px) {
+  .submit-btn {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
+
+input[type="checkbox"] + label {
+  color: #ccc;
+  font-style: italic;
+}
+
+input[type="checkbox"]:checked + label {
+  color: #f00;
+  font-style: normal;
+}
+.contact_us {
+  margin: 5% 0%;
+}
+
+/* services style */
+.card {
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  padding: 14px 80px 18px 36px;
+  cursor: pointer;
+  height: 300px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card h3 {
+  font-weight: 600;
+}
+
+.card img {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  max-height: 120px;
+}
+
+.card-1 {
+  background-image: url(https://ionicframework.com/img/getting-started/ionic-native-card.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 80px;
+}
+
+.card-2 {
+  background-image: url(https://ionicframework.com/img/getting-started/components-card.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 80px;
+}
+
+.card-3 {
+  background-image: url(https://ionicframework.com/img/getting-started/theming-card.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 80px;
+}
+
+@media (max-width: 990px) {
+  .card {
+    margin: 20px;
+  }
 }

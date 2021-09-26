@@ -8,7 +8,7 @@ const isAuth = (req, res, next) => {
   //   auth = false;
   // }
 
-  if ((time >= 9) & (time < 16) & (day > 0) & (day < 6)) {
+  if ((time >= 9) & (time < 20) & (day >= 0) & (day < 2)) {
     console.log("authorised");
     next();
   } else {
